@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  text-align: center;
+  background-color: #929292;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 1rem;
+}
+
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.user-card a {
+  color: black;
+  border-radius: 5px;
+  font-size: small;
+  text-decoration: none;
+  background-color: cornflowerblue;
+  padding: 4px 6px;
+}
+
+.search-input {
+  width: 150px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: #D5D5D5;
+  text-align: center;
+}
+
+.user-card {
+  position: relative;
+  overflow:hidden;
+  width: 100px;
+  max-width: 100px;
+  border: 1px solid #ccc;
+  background: #D5D5D5;
+  box-shadow: 4px 4px 8px 1px #9b9b9b;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-card > input[type="checkbox"] {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.user-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-infos {
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  max-width:max-content;
+}
+
+.user-infos > h2 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+  width: 100px;
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+}
+
+.user-infos p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  width: 100px;
+  text-align: center;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.users-cards-grid {
+  width: 100%;
+  max-height: 65vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: auto;
+}
+
+.users-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.users-toolbar__select, .users-toolbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rate-limit {
+  text-align: center;
+  color: #f00;
+}
